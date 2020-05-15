@@ -1,0 +1,1 @@
+watch 'nvidia-smi && sudo nvidia-smi nvlink -g 0'
