@@ -56,7 +56,7 @@ def init_gpus(soft_device_placement=True, log_device_placement=False, create_vir
 
     else:
         print("No visible GPU is detected...")
-        print("Possibly a mismatch in CUDA version")
+        print("Possibly a mismatch in CUDA version if using NVIDIA 2xxx GPU")
             
 
 def main ():
@@ -85,7 +85,7 @@ def main ():
     y_train = tf.concat([y_train, y_train, y_train, y_train, y_train], 0)
 
     classes = args.num_classes
-    batch = 300 * args.vram * args.num_gpus
+    batch = 512 * args.vram * args.num_gpus
     epoch = args.epochs
 
     train_num=0
